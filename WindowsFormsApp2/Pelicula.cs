@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Globalization;
 
 namespace WindowsFormsApp2
 {
+    [Serializable]
     public class Pelicula
     {
         string nombre;
@@ -13,9 +17,9 @@ namespace WindowsFormsApp2
         DateTime fecha_estreno;
         string descripcion;
         int presupuesto;
-        string estudio;
+        Estudio estudio;
 
-        public Pelicula(string miNombre, Persona miDirector, DateTime miFechaEstreno, string miDescripcion, int miPresupuesto, string miEstudio)
+        public Pelicula(string miNombre, Persona miDirector, DateTime miFechaEstreno, string miDescripcion, int miPresupuesto, Estudio miEstudio)
         {
             nombre = miNombre;
             director = miDirector;
